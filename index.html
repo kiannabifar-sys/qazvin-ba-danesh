@@ -497,13 +497,105 @@ flex-wrap:wrap;
 
 <section id="quiz">
 
-<h2 class="title">🎮 مسابقه</h2>
+<h2 class="title">🎮 مسابقه قزوین</h2>
 
-<p style="text-align:center;font-size:22px;">
-بخش مسابقه در مرحله بعد اضافه می‌شود.
+<div style="text-align:center">
+
+<p id="question">
+برای شروع مسابقه روی دکمه زیر کلیک کنید.
 </p>
 
-</section>
+<div id="answers"></div>
 
+<button class="btn" onclick="startQuiz()">
+شروع مسابقه
+</button>
+
+<h3>
+امتیاز:
+<span id="score">0</span>
+</h3>
+
+</div>
+
+</section>
+<script>
+
+const questions = [
+{
+question:"مرکز استان قزوین چیست؟",
+answers:["قزوین","تهران","رشت","زنجان"],
+correct:0
+},
+{
+question:"کاخ معروف قزوین چیست؟",
+answers:["چهلستون","گلستان","عالی‌قاپو","هشت‌بهشت"],
+correct:0
+},
+{
+question:"غذای معروف قزوین چیست؟",
+answers:["قیمه نثار","قورمه سبزی","فسنجان","کباب"],
+correct:0
+}
+];
+
+let current = 0;
+let score = 0;
+
+function startQuiz(){
+current = 0;
+score = 0;
+showQuestion();
+}
+
+function showQuestion(){
+
+if(current >= questions.length){
+
+document.getElementById("question").innerHTML =
+"🎉 مسابقه تمام شد";
+
+document.getElementById("answers").innerHTML =
+"<h2>امتیاز شما: "+score+" از "+questions.length+"</h2>";
+
+document.getElementById("score").innerHTML = score;
+
+return;
+}
+
+let q = questions[current];
+
+document.getElementById("question").innerHTML = q.question;
+
+let html = "";
+
+for(let i=0;i<q.answers.length;i++){
+
+html += "<button class='btn' style='margin:8px' onclick='check("+i+")'>"+q.answers[i]+"</button><br>";
+
+}
+
+document.getElementById("answers").innerHTML = html;
+
+}
+
+function check(i){
+
+if(i == questions[current].correct){
+
+score++;
+
+document.getElementById("score").innerHTML = score;
+
+}
+
+current++;
+
+showQuestion();
+
+}
+
+  </script>
+  
   </body>
 </html>
