@@ -137,5 +137,5 @@ showQuestion();
 
 }
 
-document.addEventListener("DOMContentLoaded",startQuiz);
+window.startQuiz = startQuiz;
 
