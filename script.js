@@ -69,3 +69,31 @@ createCards("places",places);
 createCards("foods",foods);
 
 });
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+img.onclick=()=>{
+const bg=document.createElement("div");
+bg.style.position="fixed";
+bg.style.top="0";
+bg.style.left="0";
+bg.style.width="100%";
+bg.style.height="100%";
+bg.style.background="rgba(0,0,0,.85)";
+bg.style.display="flex";
+bg.style.alignItems="center";
+bg.style.justifyContent="center";
+bg.style.zIndex="9999";
+
+const big=document.createElement("img");
+big.src=img.src;
+big.style.maxWidth="90%";
+big.style.maxHeight="90%";
+big.style.borderRadius="15px";
+
+bg.appendChild(big);
+
+bg.onclick=()=>bg.remove();
+
+document.body.appendChild(bg);
+};
+});
