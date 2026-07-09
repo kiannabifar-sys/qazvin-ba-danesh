@@ -23,6 +23,19 @@ if (currentQuestion >= questions.length) {
 quiz.innerHTML = `
 <h2>🎉 مسابقه تمام شد</h2>
 <p>امتیاز شما: ${score} از ${questions.length}</p>
+
+<p>
+${
+score==questions.length
+? "🏆 عالی! شما استاد قزوین هستید."
+: score>=8
+? "🥇 خیلی خوب! اطلاعات فوق‌العاده‌ای دارید."
+: score>=6
+? "🥈 خوب بود، اما هنوز جای پیشرفت دارید."
+: "📚 دوباره امتحان کن تا بیشتر با قزوین آشنا شوی."
+}
+</p>
+
 <button onclick="startQuiz()">شروع دوباره</button>
 `;
 
@@ -126,6 +139,3 @@ showQuestion();
 
 document.addEventListener("DOMContentLoaded",startQuiz);
 
-const result=document.createElement("h2");
-result.id="result";
-document.getElementById("quiz").appendChild(result);
