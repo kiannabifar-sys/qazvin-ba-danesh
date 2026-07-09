@@ -125,3 +125,7 @@ showQuestion();
 }
 
 document.addEventListener("DOMContentLoaded",startQuiz);
+
+const result=document.createElement("h2");
+result.id="result";
+document.getElementById("quiz").appendChild(result);
