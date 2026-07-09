@@ -2,52 +2,273 @@
 <html lang="fa" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>قزوین با دانش</title>
-
-<link rel="stylesheet" href="style.css">
+<title>قزوین با دانش | گردشگری، غذاهای سنتی و مسابقه</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Vazirmatn',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#eef2f7;
+color:#222;
+}
+
+header{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+url("https://upload.wikimedia.org/wikipedia/commons/5/54/Chehelsotoun_Qazvin.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+
+}
+
+header h1{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+header p{
+
+font-size:24px;
+
+max-width:800px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:15px 40px;
+
+background:#FFD700;
+
+color:black;
+
+text-decoration:none;
+
+font-size:22px;
+
+border-radius:15px;
+
+font-weight:bold;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+left:0;
+
+background:#0b3d91;
+
+padding:15px;
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+z-index:999;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+section{
+
+width:90%;
+
+max-width:1300px;
+
+margin:70px auto;
+
+}
+
+.title{
+
+font-size:42px;
+
+color:#0b3d91;
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:15px;
+
+font-size:28px;
+
+}
+
+.card p{
+
+padding:0 15px 20px;
+
+font-size:18px;
+
+}
+
+footer{
+
+background:#0b3d91;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+margin-top:60px;
+
+}
+
+@media(max-width:700px){
+
+header h1{
+
+font-size:42px;
+
+}
+
+header p{
+
+font-size:18px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<header class="hero">
-
 <nav>
 
-<div class="logo">
-🏛 قزوین با دانش
-</div>
+<a href="#places">جاهای دیدنی</a>
 
-<ul>
+<a href="#foods">غذاها</a>
 
-<li><a href="#home">خانه</a></li>
+<a href="#gallery">گالری</a>
 
-<li><a href="#places">جاهای دیدنی</a></li>
-
-<li><a href="#foods">غذاهای محلی</a></li>
-
-<li><a href="#gallery">گالری</a></li>
-
-<li><a href="#quiz">مسابقه</a></li>
-
-<li><a href="#about">درباره ما</a></li>
-
-</ul>
+<a href="#quiz">مسابقه</a>
 
 </nav>
 
-<div class="hero-content">
+<header>
 
-<h1>قزوین با دانش</h1>
+<h1>🏛 قزوین با دانش</h1>
 
 <p>
 
-مرجع معرفی جاذبه‌های گردشگری، غذاهای سنتی و مسابقه اطلاعات عمومی استان قزوین
+کامل‌ترین مرجع معرفی جاهای دیدنی، غذاهای سنتی، گالری تصاویر و مسابقه اطلاعات عمومی استان قزوین
 
 </p>
 
@@ -57,37 +278,167 @@
 
 </a>
 
-</div>
-
 </header>
-
 <main>
 
-  <section id="places">
-<h2 class="title">جاهای دیدنی قزوین</h2>
-<div class="cards"></div>
-</section>
+<section id="places">
 
+<h2 class="title">🏛 جاهای دیدنی قزوین</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Chehelsotoun_Qazvin.jpg">
+<h3>کاخ چهلستون</h3>
+<p>
+کاخ چهلستون یکی از مهم‌ترین آثار دوره صفوی است که در مرکز شهر قزوین قرار دارد و زمانی محل حکومت شاه طهماسب بوده است.
+</p>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Saad_al-Saltaneh_Caravanserai.jpg">
+<h3>سرای سعدالسلطنه</h3>
+<p>
+بزرگ‌ترین کاروانسرای سرپوشیده ایران که امروزه یکی از مهم‌ترین جاذبه‌های گردشگری قزوین محسوب می‌شود.
+</p>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Alamut_Castle.jpg">
+<h3>قلعه الموت</h3>
+<p>
+قلعه تاریخی حسن صباح که روی کوهی مرتفع ساخته شده و از مشهورترین آثار تاریخی ایران است.
+</p>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Ovan_Lake.jpg">
+<h3>دریاچه اوان</h3>
+<p>
+زیباترین دریاچه طبیعی استان قزوین که در منطقه الموت قرار گرفته و مقصد محبوب طبیعت‌گردان است.
+</p>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Jameh_Mosque_Qazvin.jpg">
+<h3>مسجد جامع قزوین</h3>
+<p>
+یکی از قدیمی‌ترین مساجد ایران با معماری باشکوه اسلامی و قدمتی بیش از هزار سال.
+</p>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Qazvin_Bazaar.jpg">
+<h3>بازار سنتی قزوین</h3>
+<p>
+بازاری تاریخی با معماری زیبا که هنوز هم مرکز خرید صنایع دستی و سوغات قزوین است.
+</p>
+</div>
+
+</div>
+
+</section>
 <section id="foods">
-<h2 class="title">غذاهای محلی</h2>
-<div class="cards"></div>
-</section>
 
+<h2 class="title">🍽 غذاهای محلی قزوین</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>قیمه نثار</h3>
+<p>مشهورترین غذای قزوین که با برنج، گوشت، خلال بادام، خلال پسته، زرشک و ادویه‌های معطر تهیه می‌شود.</p>
+</div>
+
+<div class="card">
+<h3>دیماج</h3>
+<p>غذایی سنتی که با نان خشک، پنیر، گردو، سبزی و پیازداغ تهیه می‌شود.</p>
+</div>
+
+<div class="card">
+<h3>باقلوا</h3>
+<p>یکی از شیرینی‌های معروف قزوین که با مغز پسته، بادام و هل تهیه می‌شود.</p>
+</div>
+
+<div class="card">
+<h3>نان چایی</h3>
+<p>شیرینی سنتی و محبوب قزوین که معمولاً همراه چای سرو می‌شود.</p>
+</div>
+
+<div class="card">
+<h3>پادرازی</h3>
+<p>از قدیمی‌ترین شیرینی‌های قزوین با طعمی خاص و ماندگاری بالا.</p>
+</div>
+
+<div class="card">
+<h3>آش دوغ</h3>
+<p>غذایی محلی و خوش‌طعم که در برخی مناطق استان قزوین طبخ می‌شود.</p>
+</div>
+
+</div>
+
+</section>
 <section id="gallery">
-<h2 class="title">گالری تصاویر</h2>
-<div class="cards"></div>
+
+<h2 class="title">🖼 گالری قزوین</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏛 کاخ چهلستون</h3>
+<p>نماد تاریخی شهر قزوین و یادگار دوران صفوی.</p>
+</div>
+
+<div class="card">
+<h3>🏰 قلعه الموت</h3>
+<p>یکی از مشهورترین قلعه‌های تاریخی ایران.</p>
+</div>
+
+<div class="card">
+<h3>🌊 دریاچه اوان</h3>
+<p>طبیعتی بکر و آرامش‌بخش در منطقه الموت.</p>
+</div>
+
+<div class="card">
+<h3>🕌 مسجد جامع</h3>
+<p>از قدیمی‌ترین مساجد ایران با معماری چشم‌نواز.</p>
+</div>
+
+<div class="card">
+<h3>🛍 بازار قزوین</h3>
+<p>بازاری تاریخی با صنایع دستی و سوغات متنوع.</p>
+</div>
+
+<div class="card">
+<h3>🌳 باغستان سنتی</h3>
+<p>باغ‌های قدیمی قزوین که هنوز هم پابرجا هستند.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="quiz">
-<h2 class="title">مسابقه اطلاعات عمومی</h2>
 
-<div id="quizBox">
+<h2 class="title">🎮 مسابقه اطلاعات عمومی</h2>
 
-<button onclick="startQuiz()" class="btn">
+<div style="text-align:center;">
+
+<p id="question" style="font-size:24px;margin-bottom:20px;">
+برای شروع مسابقه دکمه زیر را بزن.
+</p>
+
+<div id="answers"></div>
+
+<button class="btn" onclick="startQuiz()">
 
 شروع مسابقه
 
 </button>
+
+<p style="margin-top:25px;font-size:22px;">
+امتیاز:
+<span id="score">0</span>
+</p>
 
 </div>
 
@@ -95,35 +446,64 @@
 
 <section id="about">
 
-<h2 class="title">درباره پروژه</h2>
+<h2 class="title">📖 درباره پروژه</h2>
 
-<p style="text-align:center;font-size:20px;">
+<p style="font-size:20px;text-align:center;line-height:2.2;">
 
-این وب‌سایت برای معرفی استان قزوین طراحی شده است.
+«قزوین با دانش» با هدف معرفی جاذبه‌های گردشگری، غذاهای محلی، تاریخ و فرهنگ استان قزوین طراحی شده است.
 
 </p>
 
 </section>
 
-</main>
-
 <footer>
 
 <p>
 
-© 2026 | طراحی: کیان نبی‌فر
+© 2026 | طراحی و توسعه: کیان نبی‌فر
 
 </p>
 
 </footer>
+<section id="gallery">
 
-<script src="places.js"></script>
-<script src="foods.js"></script>
-<script src="gallery.js"></script>
-<script src="questions.js"></script>
-<script src="quiz.js"></script>
-<script src="script.js"></script>
+<h2 class="title">🖼 گالری تصاویر</h2>
 
-</body>
+<div class="cards">
 
+<div class="card">
+<h3>کاخ چهلستون</h3>
+<p>نماد تاریخی شهر قزوین.</p>
+</div>
+
+<div class="card">
+<h3>سرای سعدالسلطنه</h3>
+<p>بزرگ‌ترین کاروانسرای سرپوشیده ایران.</p>
+</div>
+
+<div class="card">
+<h3>قلعه الموت</h3>
+<p>از مشهورترین جاذبه‌های تاریخی استان قزوین.</p>
+</div>
+
+<div class="card">
+<h3>دریاچه اوان</h3>
+<p>زیباترین دریاچه طبیعی استان قزوین.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="quiz">
+
+<h2 class="title">🎮 مسابقه</h2>
+
+<p style="text-align:center;font-size:22px;">
+بخش مسابقه در مرحله بعد اضافه می‌شود.
+</p>
+
+</section>
+
+  </body>
 </html>
