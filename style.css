@@ -272,3 +272,25 @@ section{
         transform:translateY(0);
     }
 }
+
+.dark{
+    background:#111827;
+    color:white;
+}
+
+.dark .card{
+    background:#1e293b;
+    color:white;
+}
+
+.dark nav{
+    background:#0f172a;
+}
+
+#darkBtn{
+    cursor:pointer;
+    border:none;
+    border-radius:50%;
+    padding:10px;
+    font-size:20px;
+}
