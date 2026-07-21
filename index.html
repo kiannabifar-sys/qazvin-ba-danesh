@@ -750,5 +750,17 @@ function darkMode(){
 
 <button onclick="topFunction()" id="topBtn">⬆</button>
 
+<script>
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+topBtn.style.display=(window.scrollY>300)?"block":"none";
+}
+
+function topFunction(){
+window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
 </body>
 </html>
