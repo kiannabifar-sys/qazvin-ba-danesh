@@ -262,7 +262,7 @@ flex-wrap:wrap;
 
 <a href="#map">🗺 نقشه</a>
 
-<button id="darkBtn">🌙</button>
+<button onclick="darkMode()">🌙</button>
 
 </nav>
 
@@ -687,11 +687,11 @@ style="border:none;font-size:22px;">
 <script src="script.js"></script>
 
 <script>
-const darkBtn = document.getElementById("darkBtn");
+function darkMode(){
 
-darkBtn.onclick = function(){
     document.body.classList.toggle("dark");
-};
+
+}
 </script>
 
 </body>
