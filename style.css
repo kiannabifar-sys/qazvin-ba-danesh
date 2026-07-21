@@ -294,3 +294,34 @@ section{
     padding:10px;
     font-size:20px;
 }
+
+/* حالت شب کامل */
+body.dark{
+    background:#111827;
+    color:white;
+}
+
+body.dark section{
+    color:white;
+}
+
+body.dark .title{
+    color:#60a5fa;
+}
+
+body.dark .card{
+    background:#1f2937;
+    color:white;
+}
+
+body.dark .card p{
+    color:#e5e7eb;
+}
+
+body.dark footer{
+    background:#020617;
+}
+
+body.dark nav{
+    background:rgba(0,0,0,.8);
+}
