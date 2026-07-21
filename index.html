@@ -781,8 +781,8 @@ window.scrollTo({top:0,behavior:"smooth"});
 function updateClock(){
 let now=new Date();
 document.getElementById("clock").innerHTML=
-"🕒 "+now.toLocaleTimeString("fa-IR")+
-"<br>📅 "+now.toLocaleDateString("fa-IR");
+"🕒 "+now.toLocaleTimeString()+
+"<br>📅 "+now.toLocaleDateString();
 }
 setInterval(updateClock,1000);
 updateClock();
