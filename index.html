@@ -777,5 +777,16 @@ window.scrollTo({top:0,behavior:"smooth"});
 }
 </script>
 
+<script>
+function updateClock(){
+let now=new Date();
+document.getElementById("clock").innerHTML=
+"🕒 "+now.toLocaleTimeString("fa-IR")+
+"<br>📅 "+now.toLocaleDateString("fa-IR");
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
+
 </body>
 </html>
