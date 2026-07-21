@@ -1,5 +1,13 @@
-const darkBtn = document.getElementById("darkBtn");
+document.addEventListener("DOMContentLoaded", function(){
 
-darkBtn.onclick = function(){
-    document.body.classList.toggle("dark");
-};
+    const darkBtn = document.getElementById("darkBtn");
+
+    if(darkBtn){
+
+        darkBtn.onclick = function(){
+            document.body.classList.toggle("dark");
+        };
+
+    }
+
+});
